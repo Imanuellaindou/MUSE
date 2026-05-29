@@ -1,0 +1,11 @@
+<component name="ProjectRunConfigurationManager">
+  <configuration default="false" name="MUSE - Run (Application)" type="Application" factoryName="Application">
+    <option name="MAIN_CLASS_NAME" value="com.muse.Launcher" />
+    <option name="VM_PARAMETERS" value="--module-path &quot;%USERPROFILE%\.m2\repository\org\openjfx\javafx-controls\21\javafx-controls-21-win.jar;%USERPROFILE%\.m2\repository\org\openjfx\javafx-fxml\21\javafx-fxml-21-win.jar;%USERPROFILE%\.m2\repository\org\openjfx\javafx-graphics\21\javafx-graphics-21-win.jar;%USERPROFILE%\.m2\repository\org\openjfx\javafx-base\21\javafx-base-21-win.jar&quot; --add-modules javafx.controls,javafx.fxml,javafx.graphics" />
+    <option name="WORKING_DIRECTORY" value="$MODULE_WORKING_DIR$" />
+    <module name="muse" />
+    <method v="2">
+      <option name="Make" enabled="true" />
+    </method>
+  </configuration>
+</component>
