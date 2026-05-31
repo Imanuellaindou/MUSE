@@ -4,6 +4,7 @@ package com.muse.model;
  * Model class untuk data Alat Musik
  * Sesuai Class Diagram proposal MUSE
  */
+
 public class AlatMusik {
     private int id;
     private String nama;
