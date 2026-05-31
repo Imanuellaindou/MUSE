@@ -4,6 +4,7 @@ package com.muse.model;
  * Model class untuk data Pelanggan
  * Sesuai Class Diagram proposal MUSE
  */
+
 public class Pelanggan {
     private int id;
     private String nama;
