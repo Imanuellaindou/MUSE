@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.muse.controller.AlatMusikFormController"
+      spacing="16" minWidth="380">
+    <padding><Insets top="20" right="24" bottom="20" left="24"/></padding>
+
+    <Label fx:id="lblFormTitle"
+           text="Form Alat Musik"
+           style="-fx-font-size: 15px; -fx-font-weight: bold; -fx-text-fill: #1E3A5F;"/>
+
+    <GridPane hgap="16" vgap="12">
+
+        <Label text="Nama Alat *" styleClass="form-label" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+        <TextField fx:id="tfNama"
+                   promptText="Contoh: Gitar Akustik Yamaha"
+                   styleClass="form-field"
+                   prefWidth="260"
+                   GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+        <Label text="Jenis *" styleClass="form-label" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+        <TextField fx:id="tfJenis"
+                   promptText="Contoh: Gitar, Drum, Keyboard"
+                   styleClass="form-field"
+                   GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+        <Label text="Harga Sewa/hari (Rp) *" styleClass="form-label" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <TextField fx:id="tfHarga"
+                   promptText="Contoh: 50000"
+                   styleClass="form-field"
+                   GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+    </GridPane>
+
+    <!-- Error -->
+    <Label fx:id="lblError" styleClass="login-error" visible="false" managed="false"/>
+
+    <!-- Tombol -->
+    <HBox spacing="10" alignment="CENTER_RIGHT">
+        <Button text="✕ Batal"
+                styleClass="btn-secondary"
+                onAction="#onBatal"/>
+        <Button fx:id="btnSimpan"
+                text="✔ Simpan"
+                styleClass="btn-primary"
+                defaultButton="true"
+                onAction="#onSimpan"/>
+    </HBox>
+
+</VBox>
