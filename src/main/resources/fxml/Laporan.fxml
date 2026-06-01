@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.muse.controller.LaporanController"
+      spacing="16" VBox.vgrow="ALWAYS">
+
+    <Label text="Laporan Penyewaan" styleClass="page-title"/>
+
+    <!-- Toolbar Laporan -->
+    <HBox spacing="10" alignment="CENTER_LEFT"
+          style="-fx-background-color:white;-fx-padding:12;-fx-background-radius:6;
+                 -fx-effect:dropshadow(gaussian,rgba(0,0,0,0.06),6,0,0,1);">
+
+        <Label text="Periode:" style="-fx-font-size:13px;-fx-font-weight:bold;"/>
+
+        <ComboBox fx:id="cbBulan" styleClass="combo-box" prefWidth="130"/>
+        <ComboBox fx:id="cbTahun" styleClass="combo-box" prefWidth="90"/>
+        <ComboBox fx:id="cbMode"  styleClass="combo-box" prefWidth="110"/>
+
+        <Button text="Tampilkan" styleClass="btn-primary" onAction="#onTampilkan"/>
+
+        <Region HBox.hgrow="ALWAYS"/>
+
+        <Button text="⎙ Cetak" styleClass="btn-secondary" onAction="#onCetak"/>
+    </HBox>
+
+    <!-- Kartu Ringkasan -->
+    <HBox fx:id="reportContent" spacing="16">
+
+        <VBox styleClass="stat-card" alignment="CENTER" spacing="4" HBox.hgrow="ALWAYS">
+            <Label fx:id="lblTotalTrx" text="0" styleClass="stat-number stat-number-blue"/>
+            <Label text="Total Transaksi" styleClass="stat-label"/>
+        </VBox>
+
+        <VBox styleClass="stat-card" alignment="CENTER" spacing="4" HBox.hgrow="ALWAYS">
+            <Label fx:id="lblTotalPendapatan" text="Rp 0"
+                   style="-fx-font-size:20px;-fx-font-weight:bold;-fx-text-fill:#16A34A;"/>
+            <Label text="Total Pendapatan" styleClass="stat-label"/>
+        </VBox>
+
+        <VBox styleClass="stat-card" alignment="CENTER" spacing="4" HBox.hgrow="ALWAYS">
+            <Label fx:id="lblTotalDenda" text="Rp 0"
+                   style="-fx-font-size:20px;-fx-font-weight:bold;-fx-text-fill:#DC2626;"/>
+            <Label text="Total Denda" styleClass="stat-label"/>
+        </VBox>
+
+    </HBox>
+
+    <!-- Bar Chart -->
+    <VBox styleClass="chart-container" VBox.vgrow="ALWAYS" spacing="6">
+        <Label text="Grafik Transaksi per Minggu (BarChart)"
+               style="-fx-font-weight:bold;-fx-font-size:13px;-fx-text-fill:#374151;"/>
+
+        <BarChart fx:id="barChart" styleClass="bar-chart"
+                  animated="false" VBox.vgrow="ALWAYS">
+            <xAxis>
+                <CategoryAxis label="Minggu"/>
+            </xAxis>
+            <yAxis>
+                <NumberAxis label="Jumlah Transaksi"/>
+            </yAxis>
+        </BarChart>
+
+        <Label text="* Grafik menggunakan komponen BarChart dari JavaFX Charts API"
+               style="-fx-font-size:10px;-fx-text-fill:#9CA3AF;"/>
+    </VBox>
+
+</VBox>

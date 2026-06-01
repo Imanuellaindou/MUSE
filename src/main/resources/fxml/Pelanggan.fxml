@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.muse.controller.PelangganController"
+      spacing="12" VBox.vgrow="ALWAYS">
+
+    <Label text="Data Pelanggan" styleClass="page-title"/>
+
+    <!-- Toolbar -->
+    <HBox styleClass="toolbar" spacing="8" alignment="CENTER_LEFT">
+        <Button fx:id="btnTambah"  text="+ Tambah"  styleClass="btn-primary"   onAction="#onTambah"/>
+        <Button fx:id="btnEdit"    text="- Edit"    styleClass="btn-secondary" onAction="#onEdit"/>
+        <Button fx:id="btnRefresh" text="↻ Refresh" styleClass="btn-secondary" onAction="#onRefresh"/>
+
+        <Region HBox.hgrow="ALWAYS"/>
+
+        <Label text="Cari:" style="-fx-font-size:12px;"/>
+        <TextField fx:id="tfCari"
+                   promptText="Nama / nomor kontak..."
+                   styleClass="search-field"
+                   prefWidth="220"
+                   onKeyReleased="#onCari"/>
+    </HBox>
+
+    <!-- Tabel -->
+    <TableView fx:id="tablePelanggan"
+               styleClass="table-view"
+               VBox.vgrow="ALWAYS"
+               columnResizePolicy="">
+        <columns>
+            <TableColumn fx:id="colId"      text="ID"               prefWidth="60"/>
+            <TableColumn fx:id="colNama"    text="Nama"/>
+            <TableColumn fx:id="colKontak"  text="No. Kontak"       prefWidth="130"/>
+            <TableColumn fx:id="colAlamat"  text="Alamat"/>
+            <TableColumn fx:id="colJmlTrx"  text="Total Transaksi"  prefWidth="120"/>
+        </columns>
+        <placeholder><Label text="Tidak ada data pelanggan."/></placeholder>
+    </TableView>
+
+    <Label fx:id="lblInfo" styleClass="status-text"/>
+
+</VBox>
