@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.TransaksiBaruController"
+      spacing="12" VBox.vgrow="ALWAYS">
+
+    <Label text="Form Transaksi Penyewaan Baru" styleClass="page-title"/>
+
+    <!-- Layout: Form (kiri) + Ringkasan (kanan) -->
+    <HBox spacing="20" VBox.vgrow="ALWAYS">
+
+        <!-- ===== PANEL KIRI: FORM DATA PENYEWAAN ===== -->
+        <VBox styleClass="form-card" spacing="12" HBox.hgrow="ALWAYS">
+
+            <Label text="▼ Data Penyewaan"
+                   style="-fx-font-weight:bold;-fx-font-size:13px;-fx-text-fill:#374151;"/>
+
+            <GridPane hgap="16" vgap="12">
+                <padding><Insets top="8" bottom="8"/></padding>
+
+                <!-- Pelanggan -->
+                <Label text="Pelanggan *" styleClass="form-label"
+                       GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                <ComboBox fx:id="cbPelanggan"
+                          promptText="-- Pilih Pelanggan --"
+                          styleClass="combo-box" prefWidth="260"
+                          onAction="#onPelangganChanged"
+                          GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+                <!-- Alat Musik -->
+                <Label text="Alat Musik *" styleClass="form-label"
+                       GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                <ComboBox fx:id="cbAlat"
+                          promptText="-- Pilih Alat --"
+                          styleClass="combo-box" prefWidth="260"
+                          onAction="#onAlatChanged"
+                          GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+                <!-- Tanggal Pinjam -->
+                <Label text="Tanggal Pinjam *" styleClass="form-label"
+                       GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                <DatePicker fx:id="dpTanggalPinjam"
+                            prefWidth="180"
+                            onAction="#onTanggalChanged"
+                            GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+                <!-- Durasi -->
+                <Label text="Durasi Sewa (hari) *" styleClass="form-label"
+                       GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                <TextField fx:id="tfDurasi"
+                           text="1"
+                           styleClass="form-field" prefWidth="100"
+                           onKeyReleased="#onDurasiChanged"
+                           GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+                <!-- Catatan -->
+                <Label text="Catatan (opsional)" styleClass="form-label"
+                       GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+                <TextArea fx:id="taCatatan"
+                          promptText="Catatan tambahan..."
+                          prefRowCount="2" prefWidth="260"
+                          GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+
+            </GridPane>
+
+            <!-- Error -->
+            <Label fx:id="lblError" styleClass="login-error" visible="false" managed="false"/>
+
+            <!-- Tombol aksi -->
+            <HBox spacing="10">
+                <padding><Insets top="8"/></padding>
+                <Button text="✔ Simpan Transaksi" styleClass="btn-primary"  onAction="#onSimpan"/>
+                <Button text="↻ Reset Form"        styleClass="btn-secondary" onAction="#onReset"/>
+                <Button text="✕ Batal"             styleClass="btn-danger"    onAction="#onBatal"/>
+            </HBox>
+
+        </VBox>
+
+        <!-- ===== PANEL KANAN: RINGKASAN BIAYA ===== -->
+        <VBox styleClass="summary-card" spacing="8" minWidth="240" maxWidth="240">
+
+            <Label text="RINGKASAN BIAYA" styleClass="summary-title"/>
+
+            <Label fx:id="lblRingPelanggan" styleClass="summary-row-label" text="Pelanggan: -"/>
+            <Label fx:id="lblRingAlat"      styleClass="summary-row-label" text="Alat: -"/>
+            <Label fx:id="lblRingHarga"     styleClass="summary-row-label" text="Harga/hari: -"/>
+            <Label fx:id="lblRingDurasi"    styleClass="summary-row-label" text="Durasi: -"/>
+            <Label fx:id="lblRingKembali"   styleClass="summary-row-label" text="Tgl Kembali: -"/>
+
+            <Separator/>
+
+            <HBox alignment="CENTER_LEFT">
+                <Label text="Total Biaya" styleClass="summary-total-label"/>
+                <Region HBox.hgrow="ALWAYS"/>
+                <Label fx:id="lblRingTotal" text="-" styleClass="summary-total-value"/>
+            </HBox>
+
+        </VBox>
+
+    </HBox>
+
+</VBox>
