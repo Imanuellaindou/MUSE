@@ -47,7 +47,12 @@
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+<<<<<<< Updated upstream
     "git-widget-placeholder": "main",
+=======
+    "git-widget-placeholder": "setup",
+    "ignore.virus.scanning.warn.message": "true",
+>>>>>>> Stashed changes
     "kotlin-language-version-configured": "true",
     "last_opened_file_path": "C:/Users/hp/OneDrive/Documents/Prak-RPLBO-B/MUSE",
     "vue.rearranger.settings.migration": "true"
@@ -72,7 +77,11 @@
       <workItem from="1780204261190" duration="4656000" />
       <workItem from="1780211663065" duration="179000" />
       <workItem from="1780511923341" duration="557000" />
+<<<<<<< Updated upstream
       <workItem from="1780514127976" duration="2970000" />
+=======
+      <workItem from="1780513435952" duration="280000" />
+>>>>>>> Stashed changes
     </task>
     <servers />
   </component>
