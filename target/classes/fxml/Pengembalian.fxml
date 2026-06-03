@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="controller.PengembalianController"
+      spacing="12" VBox.vgrow="ALWAYS">
+
+    <Label text="Proses Pengembalian Alat" styleClass="page-title"/>
+
+    <!-- Search bar -->
+    <HBox spacing="8" alignment="CENTER_LEFT">
+        <TextField fx:id="tfSearch"
+                   promptText="Cari ID transaksi / nama pelanggan..."
+                   styleClass="search-field" prefWidth="300"
+                   onKeyReleased="#onSearch"/>
+        <Button text="Cari" styleClass="btn-secondary" onAction="#onSearch"/>
+    </HBox>
+
+    <!-- Dua panel -->
+    <HBox spacing="16" VBox.vgrow="ALWAYS">
+
+        <!-- ===== PANEL KIRI: DAFTAR TRANSAKSI AKTIF ===== -->
+        <VBox spacing="8" HBox.hgrow="ALWAYS">
+            <Label text="Transaksi Aktif / Terlambat:"
+                   style="-fx-font-weight:bold;-fx-font-size:13px;-fx-text-fill:#374151;"/>
+
+            <TableView fx:id="tableAktif"
+                       styleClass="table-view"
+                       VBox.vgrow="ALWAYS"
+                       onMouseClicked="#onRowSelected">
+                <columns>
+                    <TableColumn fx:id="colId"        text="ID"        prefWidth="80"/>
+                    <TableColumn fx:id="colPelanggan" text="Pelanggan"/>
+                    <TableColumn fx:id="colAlat"      text="Alat"      prefWidth="90"/>
+                    <TableColumn fx:id="colStatus"    text="Status"    prefWidth="95"/>
+                </columns>
+                <placeholder><Label text="Tidak ada transaksi aktif."/></placeholder>
+            </TableView>
+        </VBox>
+
+        <!-- ===== PANEL KANAN: DETAIL + DENDA ===== -->
+        <VBox fx:id="panelDetail"
+              styleClass="form-card"
+              spacing="10"
+              minWidth="320" maxWidth="340"
+              visible="false" managed="false">
+
+            <Label text="▼ Detail" style="-fx-font-weight:bold;-fx-font-size:13px;"/>
+
+            <GridPane hgap="12" vgap="8">
+                <Label text="Pelanggan"  styleClass="status-text" GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                <Label fx:id="lblDetPelanggan" style="-fx-font-weight:bold;" GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+
+                <Label text="Alat Musik" styleClass="status-text" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                <Label fx:id="lblDetAlat"      style="-fx-font-weight:bold;" GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+
+                <Label text="Tgl Pinjam" styleClass="status-text" GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+                <Label fx:id="lblDetPinjam"    style="-fx-font-weight:bold;" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+
+                <Label text="Tgl Kembali" styleClass="status-text" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+                <Label fx:id="lblDetKembali"   style="-fx-font-weight:bold;" GridPane.columnIndex="1" GridPane.rowIndex="3"/>
+
+                <Label text="Tgl Aktual" styleClass="status-text" GridPane.columnIndex="0" GridPane.rowIndex="4"/>
+                <Label fx:id="lblDetAktual"
+                       style="-fx-font-weight:bold;-fx-text-fill:#DC2626;"
+                       GridPane.columnIndex="1" GridPane.rowIndex="4"/>
+            </GridPane>
+
+            <!-- Kotak Denda -->
+            <VBox fx:id="dendaBox" styleClass="denda-box" spacing="6"
+                  visible="false" managed="false">
+                <Label text="⚠ DENDA KETERLAMBATAN" styleClass="denda-title"/>
+                <GridPane hgap="12" vgap="6">
+                    <Label text="Hari terlambat"  GridPane.columnIndex="0" GridPane.rowIndex="0"/>
+                    <Label fx:id="lblDendaHari"   GridPane.columnIndex="1" GridPane.rowIndex="0"/>
+                    <Label text="Tarif denda/hari" GridPane.columnIndex="0" GridPane.rowIndex="1"/>
+                    <Label fx:id="lblDendaTarif"  GridPane.columnIndex="1" GridPane.rowIndex="1"/>
+                </GridPane>
+                <Separator/>
+                <HBox alignment="CENTER_LEFT">
+                    <Label text="Total Denda" styleClass="denda-title"/>
+                    <Region HBox.hgrow="ALWAYS"/>
+                    <Label fx:id="lblDendaTotal" styleClass="denda-total"/>
+                </HBox>
+            </VBox>
+
+            <!-- Tombol -->
+            <Button fx:id="btnKonfirmasi"
+                    text="✔ Konfirmasi Kembali"
+                    styleClass="btn-primary"
+                    maxWidth="Infinity"
+                    onAction="#onKonfirmasi"/>
+            <Button text="✕ Batal"
+                    styleClass="btn-secondary"
+                    maxWidth="Infinity"
+                    onAction="#onBatal"/>
+        </VBox>
+
+    </HBox>
+
+</VBox>

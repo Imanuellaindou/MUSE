@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox xmlns="http://javafx.com/javafx/17"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.muse.controller.RiwayatController"
+      spacing="12" VBox.vgrow="ALWAYS">
+
+    <Label text="Riwayat Transaksi" styleClass="page-title"/>
+
+    <!-- Filter bar -->
+    <HBox spacing="8" alignment="CENTER_LEFT">
+        <Label text="Filter:" style="-fx-font-size:12px;-fx-font-weight:bold;"/>
+
+        <TextField fx:id="tfSearch"
+                   promptText="Cari pelanggan / alat..."
+                   styleClass="search-field" prefWidth="200"
+                   onKeyReleased="#onFilter"/>
+
+        <ComboBox fx:id="cbStatus"
+                  styleClass="combo-box" prefWidth="130"
+                  onAction="#onFilter"/>
+
+        <Label text="Dari:" style="-fx-font-size:12px;"/>
+        <DatePicker fx:id="dpDari"  prefWidth="140" onAction="#onFilter"/>
+
+        <Label text="Sampai:" style="-fx-font-size:12px;"/>
+        <DatePicker fx:id="dpSampai" prefWidth="140" onAction="#onFilter"/>
+
+        <Region HBox.hgrow="ALWAYS"/>
+
+        <Button text="▣ Export CSV" styleClass="btn-secondary" onAction="#onExportCSV"/>
+    </HBox>
+
+    <!-- Tabel -->
+    <TableView fx:id="tableRiwayat"
+               styleClass="table-view"
+               VBox.vgrow="ALWAYS">
+        <columns>
+            <TableColumn fx:id="colId"       text="ID"          prefWidth="80"/>
+            <TableColumn fx:id="colPelanggan" text="Pelanggan"/>
+            <TableColumn fx:id="colAlat"     text="Alat"/>
+            <TableColumn fx:id="colPinjam"   text="Tgl Pinjam"  prefWidth="100"/>
+            <TableColumn fx:id="colKembali"  text="Tgl Kembali" prefWidth="100"/>
+            <TableColumn fx:id="colDenda"    text="Denda"       prefWidth="110"/>
+            <TableColumn fx:id="colStatus"   text="Status"      prefWidth="90"/>
+        </columns>
+        <placeholder><Label text="Tidak ada data transaksi."/></placeholder>
+    </TableView>
+
+    <Label fx:id="lblTotal" styleClass="status-text"/>
+
+</VBox>
