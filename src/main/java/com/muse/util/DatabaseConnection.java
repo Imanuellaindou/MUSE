@@ -1,4 +1,4 @@
-package util;
+package com.muse.util;
 
 
 import java.sql.Connection;

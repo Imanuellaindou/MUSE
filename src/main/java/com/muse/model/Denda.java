@@ -5,7 +5,10 @@ package com.muse.model;
  * Sesuai Class Diagram proposal MUSE
  * Relasi: Transaksi → Denda (1 ke 1)
  */
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 public class Denda {
     private int id;
     private int idTransaksi;

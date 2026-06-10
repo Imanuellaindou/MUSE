@@ -1,7 +1,7 @@
-package dao;
+package com.muse.dao;
 
 import com.muse.model.AlatMusik;
-import util.DatabaseConnection;
+import com.muse.util.DatabaseConnection;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -11,8 +11,8 @@ import java.util.List;
  * Data Access Object untuk tabel tbl_alat_musik
  * Implementasi CRUD sesuai proposal
  */
-
 public class AlatMusikDAO {
+
     public List<AlatMusik> findAll() {
         List<AlatMusik> list = new ArrayList<>();
         String sql = "SELECT * FROM tbl_alat_musik ORDER BY id";
@@ -180,11 +180,11 @@ public class AlatMusikDAO {
 
     private AlatMusik mapRow(ResultSet rs) throws SQLException {
         return new AlatMusik(
-                rs.getInt("id"),
-                rs.getString("nama"),
-                rs.getString("jenis"),
-                rs.getDouble("harga_sewa"),
-                rs.getString("status")
+            rs.getInt("id"),
+            rs.getString("nama"),
+            rs.getString("jenis"),
+            rs.getDouble("harga_sewa"),
+            rs.getString("status")
         );
     }
 }

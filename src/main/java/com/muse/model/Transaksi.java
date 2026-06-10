@@ -10,7 +10,10 @@ import java.time.temporal.ChronoUnit;
  *         AlatMusik → Transaksi (1 ke banyak)
  *         Transaksi → Denda (1 ke 1)
  */
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 public class Transaksi {
     private int id;
     private Pelanggan pelanggan;

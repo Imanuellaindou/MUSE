@@ -1,8 +1,8 @@
-package dao;
+package com.muse.dao;
 
 
 import com.muse.model.Pelanggan;
-import util.DatabaseConnection;
+import com.muse.util.DatabaseConnection;
 
 import java.sql.*;
 import java.util.ArrayList;

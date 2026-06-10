@@ -1,8 +1,8 @@
-package service;
+package com.muse.service;
 
 
 import com.muse.model.AlatMusik;
-import dao.AlatMusikDAO;
+import com.muse.dao.AlatMusikDAO;
 
 import java.util.List;
 
