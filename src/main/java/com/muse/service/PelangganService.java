@@ -1,8 +1,8 @@
-package service;
+package com.muse.service;
 
 
 import com.muse.model.Pelanggan;
-import dao.PelangganDAO;
+import com.muse.dao.PelangganDAO;
 
 import java.util.List;
 

@@ -5,6 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4704e288-480a-4ee0-a987-888a2e0d883f" name="Changes" comment="">
+<<<<<<< Updated upstream
       <change afterPath="$PROJECT_DIR$/src/main/java/com/muse/model/Denda.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/com/muse/model/Transaksi.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/controller/AlatMusikController.java" afterDir="false" />
@@ -13,6 +14,8 @@
       <change afterPath="$PROJECT_DIR$/src/main/java/controller/PelangganFormController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/controller/RiwayatController.java" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/src/main/java/service/RiwayatService.java" afterDir="false" />
+=======
+>>>>>>> Stashed changes
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,6 +33,10 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="McpProjectServerCommands">
+    <commands />
+    <urls />
+  </component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 1
 }</component>
@@ -43,18 +50,31 @@
     "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "Application.MUSE - Run (Application).executor": "Run",
     "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.MCP Project settings loaded": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.typescript.service.memoryLimit.init": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
     "git-widget-placeholder": "main",
 =======
     "git-widget-placeholder": "setup",
     "ignore.virus.scanning.warn.message": "true",
 >>>>>>> Stashed changes
+=======
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "main",
+    "junie.onboarding.icon.badge.shown": "true",
+>>>>>>> Stashed changes
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/hp/OneDrive/Documents/Prak-RPLBO-B/MUSE",
+    "last_opened_file_path": "C:/Users/ACER/Downloads/MUSE",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "to.speed.mode.migration.done": "true",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
@@ -76,11 +96,15 @@
       <updated>1780204260704</updated>
       <workItem from="1780204261190" duration="4656000" />
       <workItem from="1780211663065" duration="179000" />
+<<<<<<< Updated upstream
       <workItem from="1780511923341" duration="557000" />
 <<<<<<< Updated upstream
       <workItem from="1780514127976" duration="2970000" />
 =======
       <workItem from="1780513435952" duration="280000" />
+>>>>>>> Stashed changes
+=======
+      <workItem from="1780328272721" duration="1065000" />
 >>>>>>> Stashed changes
     </task>
     <servers />
