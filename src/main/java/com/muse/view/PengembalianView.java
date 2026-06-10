@@ -1,4 +1,4 @@
-package view;
+package com.muse.view;
 
 import com.muse.model.Transaksi;
 import com.muse.service.DendaService;
@@ -88,7 +88,7 @@ public class PengembalianView {
         subTitle.setStyle("-fx-font-weight: bold; -fx-font-size: 13px; -fx-text-fill: #374151;");
 
         tableAktif = new TableView<>();
-        tableAktif.getStyleClass().add("table-view");
+        tableAktif.getStyleClass().add("table-com.muse.view");
         tableAktif.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
         tableAktif.setPlaceholder(new Label("Tidak ada transaksi aktif."));
         VBox.setVgrow(tableAktif, Priority.ALWAYS);

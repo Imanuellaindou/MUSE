@@ -1,4 +1,4 @@
-package view;
+package com.muse.view;
 
 import com.muse.model.Transaksi;
 import com.muse.service.AlatMusikService;
@@ -119,7 +119,7 @@ public class DashboardView {
 
     private TableView<Transaksi> buildTable() {
         TableView<Transaksi> table = new TableView<>();
-        table.getStyleClass().add("table-view");
+        table.getStyleClass().add("table-com.muse.view");
         table.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
         table.setPlaceholder(new Label("Tidak ada transaksi aktif."));
 

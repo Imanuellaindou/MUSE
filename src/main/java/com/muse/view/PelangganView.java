@@ -1,4 +1,4 @@
-package view;
+package com.muse.view;
 
 import com.muse.model.Pelanggan;
 import com.muse.service.PelangganService;
@@ -85,7 +85,7 @@ public class PelangganView {
 
     private TableView<Pelanggan> buildTable() {
         TableView<Pelanggan> tv = new TableView<>();
-        tv.getStyleClass().add("table-view");
+        tv.getStyleClass().add("table-com.muse.view");
         tv.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
         tv.setPlaceholder(new Label("Tidak ada data pelanggan."));
 
