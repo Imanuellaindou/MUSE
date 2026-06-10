@@ -1,4 +1,4 @@
-package view;
+package com.muse.view;
 
 import com.muse.model.Transaksi;
 import com.muse.service.RiwayatService;
@@ -103,7 +103,7 @@ public class RiwayatView {
 
     private TableView<Transaksi> buildTable() {
         TableView<Transaksi> tv = new TableView<>();
-        tv.getStyleClass().add("table-view");
+        tv.getStyleClass().add("table-com.muse.view");
         tv.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
         tv.setPlaceholder(new Label("Tidak ada data transaksi."));
 

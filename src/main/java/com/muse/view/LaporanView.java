@@ -1,4 +1,4 @@
-package view;
+package com.muse.view;
 
 import com.muse.model.Transaksi;
 import com.muse.service.LaporanService;
@@ -15,7 +15,6 @@ import javafx.scene.layout.*;
 
 import java.time.LocalDate;
 import java.util.List;
-import java.util.Locale;
 
 /**
  * Halaman Laporan Penyewaan

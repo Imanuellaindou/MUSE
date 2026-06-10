@@ -15,7 +15,7 @@
 
 <VBox xmlns="http://javafx.com/javafx/17"
       xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="controller.TransaksiBaruController"
+      fx:controller="com.muse.controller.TransaksiBaruController"
       spacing="12" VBox.vgrow="ALWAYS">
 
     <Label text="Form Transaksi Penyewaan Baru" styleClass="page-title"/>

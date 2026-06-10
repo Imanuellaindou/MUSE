@@ -1,4 +1,4 @@
-package controller;
+package com.muse.controller;
 
 import com.muse.model.Pelanggan;
 import javafx.fxml.FXML;
