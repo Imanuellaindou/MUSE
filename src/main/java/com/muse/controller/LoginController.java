@@ -1,4 +1,4 @@
-package controller;
+package com.muse.controller;
 
 import com.muse.service.AuthService;
 import javafx.fxml.FXML;

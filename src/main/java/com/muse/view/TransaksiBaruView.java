@@ -1,4 +1,4 @@
-package view;
+package com.muse.view;
 
 import com.muse.model.AlatMusik;
 import com.muse.model.Pelanggan;
@@ -12,7 +12,6 @@ import javafx.scene.control.*;
 import javafx.scene.layout.*;
 
 import java.time.LocalDate;
-import java.util.List;
 
 /**
  * Halaman Transaksi Penyewaan Baru

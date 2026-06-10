@@ -1,4 +1,4 @@
-package view;
+package com.muse.view;
 
 import com.muse.service.AuthService;
 import javafx.geometry.Insets;

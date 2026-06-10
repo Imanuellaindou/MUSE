@@ -11,7 +11,7 @@
 
 <VBox xmlns="http://javafx.com/javafx/17"
       xmlns:fx="http://javafx.com/fxml/1"
-      fx:controller="controller.DashboardController"
+      fx:controller="com.muse.controller.DashboardController"
       spacing="16" VBox.vgrow="ALWAYS">
 
     <!-- Judul -->

@@ -1,4 +1,4 @@
-package view;
+package com.muse.view;
 
 import com.muse.model.AlatMusik;
 import com.muse.service.AlatMusikService;
@@ -10,7 +10,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.*;
 
 import java.util.List;
-import java.util.Optional;
 
 /**
  * Halaman Manajemen Alat Musik
@@ -109,7 +108,7 @@ public class AlatMusikView {
 
     private TableView<AlatMusik> buildTable() {
         TableView<AlatMusik> tv = new TableView<>();
-        tv.getStyleClass().add("table-view");
+        tv.getStyleClass().add("table-com.muse.view");
         tv.setColumnResizePolicy(TableView.CONSTRAINED_RESIZE_POLICY);
         tv.setPlaceholder(new Label("Tidak ada data alat musik."));
 
